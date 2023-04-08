@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios';
+import { useNavigate } from "react-router-dom";
+
 import './Home.css';
 const Home = () => {
     const [col, setcol] = useState([]);
@@ -7,9 +9,9 @@ const Home = () => {
         const { data } = await axios.get("https://64307b10d4518cfb0e50e555.mockapi.io/workflow");
         setcol(data);
     }
-
+    let navigate = useNavigate();
     const goto = () => {
-
+        navigate('/modules');
     }
 
 

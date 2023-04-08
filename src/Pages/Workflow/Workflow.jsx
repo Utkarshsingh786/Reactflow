@@ -14,7 +14,7 @@ const initialEdges = [{ id: 'e1-2', source: '1', target: '2' },
 { id: 'e1-3', source: '1', target: '3' },
 { id: 'e1-4', source: '1', target: '4' },];
 
-const Modules = () => {
+const Workflow = () => {
     const [nodes, setNodes, onNodesChange] = useNodesState(initialNodes);
     const [edges, setEdges, onEdgesChange] = useEdgesState(initialEdges);
 
@@ -33,4 +33,4 @@ const Modules = () => {
     );
 }
 
-export default Modules;
+export default Workflow;
