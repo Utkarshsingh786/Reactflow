@@ -36,7 +36,10 @@ const DnDFlow = () => {
     const [nodes, setNodes, onNodesChange] = useNodesState(initialNodes);
     const [edges, setEdges, onEdgesChange] = useEdgesState([]);
     const [reactFlowInstance, setReactFlowInstance] = useState(null);
-    const onConnect = useCallback((params) => setEdges((eds) => addEdge(params, eds)), []);
+    const onConnect = useCallback((params) =>
+        setEdges((eds) =>
+            addEdge(params, eds)
+        ), []);
     const onDragOver = useCallback((event) => {
         event.preventDefault();
         event.dataTransfer.dropEffect = 'move';

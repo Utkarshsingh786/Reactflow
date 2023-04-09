@@ -30,7 +30,7 @@ const Home = () => {
                     <tbody>
                         {col &&
                             col.map((c, index) => (
-                                <tr>
+                                <tr key={index}>
                                     <td><span onClick={() => {
                                         navigate(`/modules/${c.name}`);
                                     }} className='router'>{c.name}</span></td>

@@ -1,4 +1,4 @@
-import React, { memo } from 'react';
+import React, { memo, useCallback } from 'react';
 import { Handle, Position } from 'reactflow';
 
 export default memo(({ data, isConnectable }) => {
@@ -8,7 +8,9 @@ export default memo(({ data, isConnectable }) => {
                 type="source"
                 position={Position.Bottom}
                 style={{ background: '#555' }}
-                onConnect={(params) => console.log('handle onConnect', params)}
+                onConnect={(params) => {
+                    console.log(params);
+                }}
                 isConnectable={isConnectable}
             />
             <ul style={{ display: "flex", justifyContent: "space-around", height: '100%' }}>
