@@ -13,22 +13,22 @@ export default () => {
         fetchmodules();
     }, [page]);
 
-    const onDragStart = (event, nodeTypes) => {
-        event.dataTransfer.setData('application/reactflow', nodeTypes);
+    const onDragStart = (event, Data) => {
+        var dummy = JSON.stringify(Data);
+        event.dataTransfer.setData('application/reactflow', dummy);
         event.dataTransfer.effectAllowed = 'move';
     };
-
     return (
         <aside>
             <span><h1>Modules</h1></span>
             {mods &&
-                mods.map((c) => (
-                    <ul className="dndnode" onDragStart={(event) => onDragStart(event, `raj`)} draggable>
+                mods.map((c, index) => (
+                    <ul key={c.id} className="dndnode" onDragStart={(event) => onDragStart(event, mods[index])} draggable>
                         <li style={{
-                            width: "20%", padding: '13px', borderRight: '1px ridge skyblue'
+                            width: "10%", padding: '13px', borderRight: '1px ridge skyblue'
                         }}> {c.input_type}</li>
-                        <li style={{ width: "60%", padding: '13px', borderRight: '1px ridge skyblue' }}>{c.name}</li>
-                        <li style={{ width: "20%", border: "none", padding: '13px' }}>{c.output_type}</li>
+                        <li style={{ width: "80%", padding: '13px', borderRight: '1px ridge skyblue' }}>{c.name}</li>
+                        <li style={{ width: "10%", border: "none", padding: '13px' }}>{c.output_type}</li>
                     </ul>
                 ))}
             <Custompagination setPage={setpage} />

@@ -57,6 +57,11 @@
       width: 30%;
       max-width: 400px;
     }
+    .pagination{
+      display: block;
+      justify-content: center;
+      margin-left: 4%;
+    }
   }
 ul,li{
     list-style-type: none;
@@ -70,11 +75,7 @@ h2{
   border:1px ridge skyblue;
 }
 
-li{
- 
-  text-align: center;
-  /* height: 20px; */
-}
+
 
  span{
   margin: 0;
@@ -85,13 +86,45 @@ li{
   padding-bottom: 10px;
 }
 
+.danger{
+  text-align: center;
+  width: 35%;
+  border-right: 1px ridge red;
+}
 
+.input{
+  text-align: center;
+  border-right: 1px ridge black;
+  width: 35%;
+}
 .Cnode{
   font-size: 12px;
   background: #eee;
-  border: 1px solid #555;
+  border: 1px solid red;
   border-radius: 5px;
   text-align: center;
   width: 200px;
   height: 20px;
+}
+.custom{
+  font-size: 12px;
+  background: #eee;
+  border: 1px solid black;
+  border-radius: 5px;
+  text-align: center;
+  width: 200px;
+  height: 20px;
+}
+
+
+@media screen and (max-width: 768px){
+  .pagination{
+    display: flex;
+    justify-content: center;
+  }
+}
+.customnodes{
+  display: flex;
+  justify-content: space-around;
+  height: 100%;
 }

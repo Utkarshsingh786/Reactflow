@@ -8,13 +8,12 @@ const CustomPagination = ({ setPage, numOfPages = 20 }) => {
 
     return (
         <div
+            className="pagination"
             style={{
                 width: "100%",
-                display: "flex",
                 justifyContent: "center",
-                position: "relative",
-                top: "45%",
-
+                position: "absolute",
+                bottom: 0,
             }}
         >
             <Pagination

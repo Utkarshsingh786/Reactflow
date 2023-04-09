@@ -11,10 +11,10 @@ export default memo(({ data, isConnectable }) => {
                 onConnect={(params) => console.log('handle onConnect', params)}
                 isConnectable={isConnectable}
             />
-            <ul style={{ display: "flex", justifyContent: "space-around", height: '100%' }}>
-                <li style={{ width: "20%", borderRight: '1px ridge black' }}></li>
-                <li style={{ width: "60%", borderRight: '1px ridge black' }}></li>
-                <li style={{ width: "20%", border: "none" }}></li>
+            <ul className="customnodes">
+                <li className='danger' style={{ width: "10%" }} >{data.input}</li>
+                <li className='danger' style={{ width: "80%" }} >{data.name}</li>
+                <li className='danger' style={{ width: "10%", border: "none" }}>{data.output}</li>
             </ul>
             <Handle
                 type="target"
