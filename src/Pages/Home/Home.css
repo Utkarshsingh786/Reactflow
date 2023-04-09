@@ -45,6 +45,7 @@ th{
 }
 
 .router{
+    border: none;
     text-decoration: underline;
     cursor: pointer;
 }

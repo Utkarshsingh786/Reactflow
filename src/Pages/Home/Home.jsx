@@ -10,10 +10,6 @@ const Home = () => {
         setcol(data);
     }
     let navigate = useNavigate();
-    const goto = () => {
-        navigate('/modules');
-    }
-
 
     useEffect(() => {
         fetchapi();
@@ -33,9 +29,11 @@ const Home = () => {
                     </thead>
                     <tbody>
                         {col &&
-                            col.map((c) => (
-                                <tr >
-                                    <td><span onClick={goto} className='router'>{c.name}</span></td>
+                            col.map((c, index) => (
+                                <tr>
+                                    <td><span onClick={() => {
+                                        navigate(`/modules/${c.name}`);
+                                    }} className='router'>{c.name}</span></td>
                                     <td>{c.input_type}</td>
                                     <td>{c.createdAt.substring(0, 10)}</td>
                                 </tr>

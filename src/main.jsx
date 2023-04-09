@@ -1,7 +1,8 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import Home from './Pages/Home/Home.jsx';
-import Modules from './Pages/Modules/Modules.jsx'
+// import Modules from './Pages/Modules/Modules.jsx'
+import DnDFlow from './Pages/Dragndrop/Drag.jsx';
 import './index.css'
 import {
   createBrowserRouter,
@@ -13,7 +14,7 @@ const router = createBrowserRouter(
   createRoutesFromElements(
     <Route>
       <Route path="/" element={<Home />}></Route>
-      <Route path="/modules" element={<Modules />} />
+      <Route path="/modules/:name" element={<DnDFlow />} />
     </Route>
   )
 );
