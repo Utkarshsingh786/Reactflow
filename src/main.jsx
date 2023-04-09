@@ -1,7 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import Home from './Pages/Home/Home.jsx';
-// import Modules from './Pages/Modules/Modules.jsx'
 import DnDFlow from './Pages/Dragndrop/Drag.jsx';
 import './index.css'
 import {
